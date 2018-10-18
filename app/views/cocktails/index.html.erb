@@ -1,0 +1,32 @@
+<div class="home" >
+<div>
+  <%= render 'banner' %>
+</div>
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail|  %>
+
+
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to cocktail_path(cocktail) do %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%=image_url('mojito.jpg')%>);">
+          <div class="card-category">
+            <%= cocktail.name.capitalize %>
+          </div>
+      </div>
+      <% end %>
+    </div>
+
+    <% end %>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
