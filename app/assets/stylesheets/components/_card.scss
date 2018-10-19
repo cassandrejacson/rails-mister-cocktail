@@ -14,37 +14,117 @@
   transition: 2s opacity;
 }
 
+  @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
 .card {
-  &::before,
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: scale3d(0, 0, 1);
-    transition: transform .3s ease-out 0s;
-    background: rgba(255, 255, 255, .1);
-    content: '';
-    pointer-events: none;
-  }
-
-  &::before {
-    transform-origin: left top;
-  }
-
-  &::after {
-    transform-origin: right bottom;
-  }
-
-  &:hover,
-  &:focus {
-    &::before,
-    &::after {
-      transform: scale3d(1, 1, 1);
-    }
-  }
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 8px;
+  min-width: 230px;
+  max-width: 315px;
+  width: 100%;
+  color: white;
+  text-align: left;
+  font-size: 16px;
+  background: #ffffff;
 }
+
+.card *,
+.card:before,
+.card:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.card img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+}
+
+.card:before,
+.card:after {
+  content: '';
+  background-color: rgb(255, 77, 166);
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.card:before {
+  width: 300px;
+  height: 2px;
+}
+
+.card:after {
+  height: 450px;
+  width: 3px;
+}
+
+
+.card:hover img,
+.card.hover img {
+  zoom: 1;
+  filter: alpha(opacity=25);
+  -webkit-opacity: 0.25;
+  opacity: 0.25;
+}
+
+.card:hover:before,
+.card.hover:before,
+.card:hover:after,
+.card.hover:after {
+  opacity: 1;
+}
+
+.card:hover:before,
+.card.hover:before {
+  width: 50px;
+}
+
+.card:hover:after,
+.card.hover:after {
+  height: 50px;
+}
+
+
+//   &::before,
+//   &::after {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     left: 0;
+//     transform: scale3d(0, 0, 1);
+//     transition: transform .3s ease-out 0s;
+//     background: rgba(255, 255, 255, .1);
+//     content: '';
+//     pointer-events: none;
+//   }
+
+//   &::before {
+//     transform-origin: left top;
+//   }
+
+//   &::after {
+//     transform-origin: right bottom;
+//   }
+
+//   &:hover,
+//   &:focus {
+//     &::before,
+//     &::after {
+//       transform: scale3d(1, 1, 1);
+//     }
+//   }
+// }
 .card-user {
   position: absolute;
   right: 10px;

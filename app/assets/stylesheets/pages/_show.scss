@@ -1,0 +1,61 @@
+.row h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.wrapper {
+  margin: 0px;
+}
+
+.col-xs-4 {
+  background: rgba(255, 255, 230, 0.35);
+   height: 70vh;
+   margin-top: 30px;
+
+
+}
+.col-xs-8 {
+  background: rgba(255, 255, 230, 0.35);
+  height: 70vh;
+  text-align: left;
+  margin-top: 30px;
+  padding-left: 170px;
+
+}
+
+.simple_form_for {
+  margin-top: 25px;
+}
+
+.col-xs-8 h2 {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  color: white;
+  text-align: center;
+  height: 150vh;
+  /* if you have a 70px navbar => height: calc(100vh - 70px); */
+  background-size: cover !important;
+  display: flex;
+  justify-content: center;
+}
+.wrapper h1 {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.2);
+}
+.wrapper p {
+  font-size: 25px;
+  font-weight: lighter;
+  color: rgb(255, 255, 255);
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+li {
+list-style: none;}
+
+

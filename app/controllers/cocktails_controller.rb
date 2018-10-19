@@ -4,6 +4,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
+    @dose = Dose.new
     @cocktail = Cocktail.find(params[:id])
     @doses = Dose.where(cocktail_id: params[:id])
     @ingredient = Ingredient.find(params[:id])
@@ -21,6 +22,7 @@ class CocktailsController < ApplicationController
       render :new
     end
   end
+
   private
 
   def cocktail_params
